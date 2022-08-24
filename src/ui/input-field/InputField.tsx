@@ -2,13 +2,12 @@ import React from "react";
 
 import { FieldBase } from "../field-base";
 
-interface Props
+export interface InputFieldProps
   extends React.DetailedHTMLProps<
     React.InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
   > {
   label: string;
-  className?: string;
   error?: string;
 }
 
@@ -17,7 +16,7 @@ export const InputField = ({
   error,
   className,
   ...inputProps
-}: Props) => {
+}: InputFieldProps) => {
   return (
     <FieldBase label={label} error={error} className={className}>
       <input {...inputProps} />
