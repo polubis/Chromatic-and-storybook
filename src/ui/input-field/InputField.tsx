@@ -19,7 +19,7 @@ export const InputField = ({
 }: InputFieldProps) => {
   return (
     <FieldBase label={label} error={error} className={className}>
-      <input {...inputProps} />
+      <input {...inputProps} style={{ background: "red" }} />
     </FieldBase>
   );
 };
